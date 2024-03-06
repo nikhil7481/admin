@@ -1,0 +1,54 @@
+<div class="wrapper">
+  <div class="logo">
+    <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="">
+    <!-- <img src="/src/assets/logo.jpeg" alt=""> -->
+  </div>
+  <div class="text-center mt-4 name">
+    Xcelcode
+  </div>
+  <form class="p-3 mt-3" (ngSubmit)="submitLogin()">
+    <div class="form-field d-flex align-items-center">
+      <span class="far fa-user"></span>
+      <input type="text" name="email" id="email" placeholder="Email" [(ngModel)]="email">
+    </div>
+    <div class="form-field d-flex align-items-center">
+      <span class="fas fa-key"></span>
+      <input type="password" name="password" id="pwd" placeholder="Password" [(ngModel)]="password">
+    </div>
+    <button type="submit" class="btn mt-3">Login</button>
+  </form><br>
+  <div class="text-center fs-6">
+    <p>You Forget password?<a href="#">Forget password?</a></p><br>
+    <p>Don't have an account? <a href="app-signup" (click)="goToSignUp()">Sign up</a></p>
+  </div>
+</div>
+
+
+<!-- login.component.html
+
+<div class="container">
+  <div class="form-box">
+    <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+      <h2>Login</h2>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" placeholder="Enter your email">
+        <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+          Email is required
+        </mat-error>
+        <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+          Please enter a valid email address
+        </mat-error>
+      </mat-form-field> 
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" placeholder="Enter your password">
+        <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary">Login</button>
+    </form>
+    <p>Don't have an account? <a href="app-signup" (click)="goToSignUp()">Sign up</a></p>
+  </div>
+</div> -->

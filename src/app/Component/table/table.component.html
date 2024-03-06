@@ -1,0 +1,23 @@
+<br><br>
+<table mat-table [dataSource]="dataSource" matSort>
+  <!-- Column definitions -->
+  <ng-container *ngFor="let column of columns" [matColumnDef]="column.dataField">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+      <div class="header-cell-content">
+        <mat-form-field appearance="fill">
+          <mat-label>{{ column.name }}</mat-label>
+          <input matInput (keyup)="applyFilter(column.dataField, $event)" [placeholder]="'Search ' + column.name">
+          <button mat-button *ngIf="dataSource.filter" matSuffix mat-icon-button aria-label="Clear" (click)="clearFilter()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+    </th>
+    <td mat-cell *matCellDef="let row" [ngClass]="{ 'gray-background': column.dataField === 'id' || column.dataField === 'name' || column.dataField === 'age' || column.dataField === 'email' }">{{ row[column.dataField] }}</td>
+  </ng-container>
+  <!-- Header and row definitions -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<!-- Paginator -->
+<mat-paginator *ngIf="isPaginator" [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
