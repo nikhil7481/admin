@@ -1,27 +1,30 @@
-<div class="wrapper">
-  <div class="logo">
-    <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="">
-    <!-- <img src="/src/assets/logo.jpeg" alt=""> -->
-  </div>
-  <div class="text-center mt-4 name">
-    Xcelcode
-  </div>
-  <form class="p-3 mt-3" (ngSubmit)="submitLogin()">
-    <div class="form-field d-flex align-items-center">
-      <span class="far fa-user"></span>
-      <input type="text" name="email" id="email" placeholder="Email" [(ngModel)]="email">
+<div class="login-box">
+  <h1>Xcelcode</h1>
+  <h3>Login</h3>
+  <form (ngSubmit)="submitLogin()">
+    <div class="user-box">
+      <input type="text" name="email" id="email"  required="" [(ngModel)]="email">
+      <label>Email</label>
     </div>
-    <div class="form-field d-flex align-items-center">
-      <span class="fas fa-key"></span>
-      <input type="password" name="password" id="pwd" placeholder="Password" [(ngModel)]="password">
+    <div class="user-box">
+      <input type="password" name="password" required="" [(ngModel)]="password">
+      <label>Password</label>
     </div>
-    <button type="submit" class="btn mt-3">Login</button>
-  </form><br>
+  
+    <button href="#" type="submit">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Login
+    </button>
+  </form>
   <div class="text-center fs-6">
     <p>You Forget password?<a href="#">Forget password?</a></p><br>
     <p>Don't have an account? <a href="app-signup" (click)="goToSignUp()">Sign up</a></p>
   </div>
 </div>
+
 
 
 <!-- login.component.html

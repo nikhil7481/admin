@@ -1,1 +1,4 @@
-<app-table [columns]="tableColumns" [data]="tableData" [isPaginator]="true"></app-table>
+<div *ngIf="users">
+    <app-table [columns]="tableColumns" [data]="users"  (edit)="editUser($event)" (delete)="deleteUser($event)"></app-table>
+  </div>
+  

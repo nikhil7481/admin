@@ -6,6 +6,7 @@ import { AuthGuard } from './Component/Services/auth.guard';
 import { HomeComponent } from './Component/home/home.component';
 import { SidebarComponent } from './Component/sidebar/sidebar.component';
 import { UserComponent } from './Component/user/user.component';
+import { TableComponent } from './Component/table/table.component';
 
 
 export const routes: Routes = [
@@ -16,5 +17,6 @@ export const routes: Routes = [
     { path: 'app-home', component: HomeComponent },
     { path: 'app-header', component: HeaderComponent },
     { path: 'app-sidebar', component: SidebarComponent },
-    { path: 'app-user', component: UserComponent }
+    { path: 'app-user', component: UserComponent },
+    {path:'app-table',component:TableComponent}
 ];

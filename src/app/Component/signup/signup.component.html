@@ -1,70 +1,28 @@
-<div class="wrapper">
-
-  <div class="logo">
-    <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="">
-    <!-- <img src="src/assets/logo.jpeg" alt=""> -->
-  </div>
-  <div class="text-center mt-4 name">
-    Xcelcode
-  </div>
-  <form class="p-3 mt-3" (ngSubmit)="submitSignup()">
-    <div class="form-field d-flex align-items-center">
-      <span class="far fa-user"></span>
-      <input type="text" name="fullname" id="fullname" placeholder="Fullname" [(ngModel)]="fullname">
+<div class="signup-box">
+  <h1>Xcelcode</h1>
+  <h3>Sign Up</h3>
+  <form (ngSubmit)="submitSignup()">
+    <div class="user-box">
+      <input type="text" name="fullname" id="fullname"   required=""  [(ngModel)]="fullname">
+      <label>Full Name</label>
     </div>
-    <div class="form-field d-flex align-items-center">
-      <span class="far fa-envelope"></span>
-      <input type="email" name="email" id="email" placeholder="Email" [(ngModel)]="email">
+    <div class="user-box">
+      <input type="text" name="email" id="email"  required="" [(ngModel)]="email">
+      <label>Email</label>
     </div>
-    <div class="form-field d-flex align-items-center">
-      <span class="fas fa-key"></span>
-      <input type="password" name="password" id="pwd" placeholder="Password" [(ngModel)]="password">
+    <div class="user-box">
+      <input type="password" name="password" id="password"  required="" [(ngModel)]="password">
+      <label>Password</label>
     </div>
-    <button type="submit" class="btn mt-3">Sign Up</button>
-  </form><br>
+    <button type="submit">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Sign Up
+    </button>
+  </form>
   <div class="text-center fs-6">
-    Already have an account? <a href="app-login" (click)="goToLogin()">Login</a>
+    <p>Already have an account? <a href="app-login" (click)="goToLogin()">Login</a></p>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-<!-- signup.component.html
-<form [formGroup]="signupForm" (ngSubmit)="submitSignup()">
-  <h2>Sign up</h2>
-  <mat-form-field appearance="fill">
-    <mat-label>Full Name</mat-label>
-    <input matInput formControlName="fullName" placeholder="Enter your full name">
-    <mat-error *ngIf="signupForm.get('fullName')?.hasError('required')">
-      Full Name is required
-    </mat-error>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Email</mat-label>
-    <input matInput formControlName="email" type="email" placeholder="Enter your email">
-    <mat-error *ngIf="signupForm.get('email')?.hasError('required')">
-
-      Email is required
-    </mat-error>
-    <mat-error *ngIf="signupForm.get('email')?.hasError('email')">
-      Please enter a valid email address
-    </mat-error>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Password</mat-label>
-    <input matInput formControlName="password" type="password" placeholder="Enter your password">
-    <mat-error *ngIf="signupForm.get('password')?.hasError('required')">
-      Password is required
-    </mat-error>
-  </mat-form-field>
-  <button type="submit" mat-raised-button color="primary">Sign up</button>
-  <p>Already have an account? <a href="#" (click)="goToLogin()">Login</a></p>
-</form> -->

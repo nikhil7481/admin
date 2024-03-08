@@ -9,6 +9,8 @@ import { Comment } from '@angular/compiler';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from "./Component/login/login.component";
 import { SignupComponent } from "./Component/signup/signup.component";
+import { UserComponent } from './Component/user/user.component';
+import { AuthService } from './Component/Services/auth.service';
 
 
 @Component({
@@ -16,7 +18,8 @@ import { SignupComponent } from "./Component/signup/signup.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, HeaderComponent, SidebarComponent, MatSidenavModule, MatToolbarModule, CommonModule, LoginComponent, SignupComponent]
+    imports: [RouterOutlet, HeaderComponent, SidebarComponent, MatSidenavModule, MatToolbarModule, CommonModule, LoginComponent,SignupComponent],
+   
 })
 export class AppComponent implements OnInit{
   showHeaderAndSidebar: boolean = true;

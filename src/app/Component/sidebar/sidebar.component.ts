@@ -9,6 +9,9 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterModule } from '@angular/router';
 import { SidebarService } from './SidebarService';
+import { AuthService } from '../Services/auth.service';
+import { TableComponent } from '../table/table.component';
+import { UserComponent } from '../user/user.component';
 @Component({
   selector: 'app-sidebar',
   standalone: true,

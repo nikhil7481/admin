@@ -2,7 +2,8 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
+import { User } from '../Models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +15,23 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.baseUrl}/user`); // Adjust the endpoint as per your API
+  }
+
   signUp(fullName: string, email: string, password: string): Observable<any> {
     return this.http.post(`${this.baseUrl}/signup`, { fullName, email, password });
   }
 
   login(email: string, password: string): Observable<any> {
     return this.http.post(`${this.baseUrl}/login`, { email, password });
+  }
+  deleteUser(userId: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/delete/${userId}`);
+  }
+
+  updateUser(user: User): Observable<User> {
+    return this.http.put<User>(`${this.baseUrl}/edit/${user.id}`, user);
   }
 
   setToken(token: string): void {

@@ -1,4 +1,46 @@
-.gray-background {
-    background-color: rgb(190, 190, 190);
-  }
-  
+/* table.component.css */
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Style the table headers */
+th {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Style the table data cells */
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Style the table actions buttons */
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Change color on hover */
+button:hover {
+  background-color: #45a049;
+}
+
+/* Style the table action column */
+.actions {
+  text-align: center;
+}
